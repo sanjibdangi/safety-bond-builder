@@ -14,7 +14,7 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden scroll-mt-24">
       {/* Background with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0">
         <img
@@ -77,7 +77,7 @@ export function Hero() {
             className="text-base sm:text-2xl lg:text-3xl text-slate-200 max-w-4xl mx-auto mb-12 leading-relaxed px-2"
           >
             Providing an unmatched level of safety management that produces a{' '}
-            <span className="text-emerald-400 font-semibold">measurable difference</span>
+            <span className="text-emerald-400 font-semibold">measurable difference.</span>
           </motion.p>
 
           {/* CTA Buttons */}
@@ -99,16 +99,17 @@ export function Hero() {
               Get In Touch
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.2)" }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => {
-                const element = document.getElementById('services');
-                element?.scrollIntoView({ behavior: 'smooth' });
-              }}
-              className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold text-lg border-2 border-white/30 transition-all duration-300"
-            >
-              Our Services
-            </motion.button>
+  whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.2)" }}
+  whileTap={{ scale: 0.98 }}
+  onClick={() => {
+    const element = document.querySelector('#services');
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }}
+  className="px-10 py-5 bg-white/10 backdrop-blur-sm text-white rounded-xl font-bold text-lg border-2 border-white/30 transition-all duration-300"
+>
+  Our Services
+</motion.button>
+
           </motion.div>
 
           {/* Stats Bar */}

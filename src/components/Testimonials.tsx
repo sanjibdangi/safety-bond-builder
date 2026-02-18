@@ -55,7 +55,7 @@ export function Testimonials() {
       ];
 
   return (
-    <section id="testimonials" ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30"> 
+    <section id="testimonials" ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30 scroll-mt-24"> 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}

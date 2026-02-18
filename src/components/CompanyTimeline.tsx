@@ -13,7 +13,7 @@ export function CompanyTimeline() {
   ];
 
   return (
-    <section ref={ref} className="py-16 bg-background dark:bg-slate-700">
+    <section ref={ref} className="py-16 bg-background dark:bg-slate-700 scroll-mt-24">
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div

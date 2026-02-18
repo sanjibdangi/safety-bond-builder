@@ -13,7 +13,7 @@ export function Team() {
   ];
 
   return (
-    <section id="team" ref={ref} className="py-24 bg-background">
+    <section id="team" ref={ref} className="py-24 bg-background scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Heading */}

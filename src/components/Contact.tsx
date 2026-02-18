@@ -26,7 +26,7 @@ export function Contact() {
   const pscCodes = ['R425', 'R408', 'U099', 'H122', 'H149', 'H341', 'S216', 'Q999', 'Z2NZ', 'F103', 'F108', 'B510', 'F999', 'M112', 'J099'];
 
   return (
-    <section id="contact" ref={ref} className="py-24 bg-slate-50">
+    <section id="contact" ref={ref} className="py-24 bg-slate-50 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

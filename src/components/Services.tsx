@@ -24,7 +24,7 @@ export function Services() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30">
+    <section id='services' ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

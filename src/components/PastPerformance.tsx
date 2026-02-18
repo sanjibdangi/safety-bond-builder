@@ -31,7 +31,7 @@ export function PastPerformance() {
   ];
 
   return (
-    <section ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30">
+    <section id='performance' ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30 scroll-mt-24">
       <div className="container mx-auto px-6">
 
         {/* Heading */}
