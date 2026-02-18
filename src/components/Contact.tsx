@@ -149,18 +149,6 @@ export function Contact() {
             </motion.div>
           </div>
         </div>
-
-        {/* Footer */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 pt-8 border-t border-slate-300 text-center"
-        >
-          <p className="text-slate-600">
-            © 2026 Corr Safety Professionals Inc. All rights reserved. | Founded 2018 | GSA MAS Contract: 47QRAA25D000N
-          </p>
-        </motion.div>
       </div>
     </section>
   );
