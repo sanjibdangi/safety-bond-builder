@@ -27,13 +27,13 @@ export function FloatingCTA() {
           initial={{ opacity: 0, scale: 0.8, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.8, y: 20 }}
-          className="fixed bottom-8 right-8 z-40"
+          className="fixed bottom-6 right-4 sm:bottom-8 sm:right-8 z-40"
         >
           {isExpanded ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="bg-card rounded-2xl shadow-2xl p-6 w-80 border border-slate-200"
+              className="bg-card rounded-2xl shadow-2xl p-6 w-72 sm:w-80 border border-slate-200"
             >
               <div className="flex justify-between items-center mb-4">
                 <h3 className="font-bold text-slate-900">Get Started Today</h3>
