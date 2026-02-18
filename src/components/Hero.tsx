@@ -56,7 +56,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 tracking-tight"
+            className="text-3xl xs:text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 tracking-tight"
           >
             CORR SAFETY
             <br />
@@ -70,7 +70,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-xl sm:text-2xl lg:text-3xl text-slate-200 max-w-4xl mx-auto mb-12 leading-relaxed"
+            className="text-base sm:text-2xl lg:text-3xl text-slate-200 max-w-4xl mx-auto mb-12 leading-relaxed px-2"
           >
             Providing an unmatched level of safety management that produces a{' '}
             <span className="text-emerald-400 font-semibold">measurable difference</span>
@@ -112,19 +112,19 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="grid grid-cols-3 gap-6 max-w-3xl mx-auto"
+            className="grid grid-cols-3 gap-3 sm:gap-6 max-w-3xl mx-auto"
           >
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-emerald-400 mb-1">8+</div>
-              <div className="text-sm sm:text-base text-slate-300">Years Experience</div>
+              <div className="text-2xl sm:text-4xl font-bold text-emerald-400 mb-1">8+</div>
+              <div className="text-xs sm:text-base text-slate-300">Years Experience</div>
             </div>
             <div className="text-center border-x border-white/20">
-              <div className="text-3xl sm:text-4xl font-bold text-emerald-400 mb-1">425+</div>
-              <div className="text-sm sm:text-base text-slate-300">Projects Completed</div>
+              <div className="text-2xl sm:text-4xl font-bold text-emerald-400 mb-1">425+</div>
+              <div className="text-xs sm:text-base text-slate-300">Projects Completed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-emerald-400 mb-1">100%</div>
-              <div className="text-sm sm:text-base text-slate-300">Safety Focused</div>
+              <div className="text-2xl sm:text-4xl font-bold text-emerald-400 mb-1">100%</div>
+              <div className="text-xs sm:text-base text-slate-300">Safety Focused</div>
             </div>
           </motion.div>
         </motion.div>

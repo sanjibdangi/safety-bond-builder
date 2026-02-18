@@ -75,7 +75,7 @@ export function Contact() {
                       <div>
                         <div className="text-sm text-slate-500 mb-1">{info.label}</div>
                         {info.link ? (
-                          <a href={info.link} className="text-slate-900 hover:text-emerald-600 transition-colors font-medium">
+                          <a href={info.link} className="text-slate-900 hover:text-emerald-600 transition-colors font-medium break-all sm:break-normal">
                             {info.value}
                           </a>
                         ) : (
