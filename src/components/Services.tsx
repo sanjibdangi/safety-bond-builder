@@ -15,16 +15,16 @@ export function Services() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   const services = [
-    { icon: Users, title: 'Site Safety Staffing', description: 'Professional safety personnel for your projects', image: 'https://images.unsplash.com/photo-1694522362256-6c907336af43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzYWZldHklMjB3b3JrZXIlMjBoZWxtZXR8ZW58MXx8fHwxNzcxNDM1MjI3fDA&ixlib=rb-4.1.0&q=80&w=1080' },
-    { icon: GraduationCap, title: 'Safety Training', description: 'OSHA 10/30, HAZWOPER, CPR/First Aid, Fall Protection, Confined Space', image: 'https://images.unsplash.com/photo-1713689824343-77d2f99e19b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZldHklMjB0cmFpbmluZyUyMGNsYXNzcm9vbSUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzE0MzUyMjd8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-    { icon: Search, title: 'Compliance Auditing', description: 'Regulatory Gap Analysis', image: 'https://images.unsplash.com/photo-1752937285643-b1bc660beb92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwaW5zcGVjdGlvbiUyMGNoZWNrbGlzdHxlbnwxfHx8fDE3NzE0MzUyMjh8MA&ixlib=rb-4.1.0&q=80&w=1080' },
-    { icon: BookOpen, title: 'Safety Program Development', description: 'Custom compliance solutions', image: 'https://images.unsplash.com/photo-1706517212972-18a1e840989d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWZldHklMjBjb21wbGlhbmNlJTIwZG9jdW1lbnRhdGlvbnxlbnwxfHx8fDE3NzE0MzUyMjl8MA&ixlib=rb-4.1.0&q=80&w=1080' },
+    { icon: Users, title: 'Site Safety Staffing', description: 'Professional safety personnel for your projects', image: 'https://corrsafety.com/wp-content/uploads/2020/06/safety.jpg' },
+    { icon: GraduationCap, title: 'Safety Training', description: 'OSHA 10/30, HAZWOPER, CPR/First Aid, Fall Protection, Confined Space', image: 'https://imgs.search.brave.com/Hzqc6YSvliNuoKNptkBmlDIgTPzybcGK-sm52IAMglE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTk1/NzA3NTYzNC9waG90/by9tYW5hZ2VyLWNv/bGxlYWd1ZS1wZXJm/b3JtaW5nLWNwci1v/bi1hbi1pbmp1cmVk/LWVtcGxveWVlLWx5/aW5nLW9uLXRoZS1n/cm91bmQtaW4tYS13/YXJlaG91c2UuanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPWtO/ME1idTlkeDN0ZUVQ/U1h5UUFRaWlvZ3d2/OVh4aW91dVhXa1B5/TE55aG89' },
+    { icon: Search, title: 'Compliance Auditing', description: 'Regulatory Gap Analysis', image: 'https://imgs.search.brave.com/2YTcXRoeJ-U4JAE9fpTHzRu8RUE1NOuHRWuAB4boyng/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jcnFh/LmluL2ltYWdlcy9z/bGlkZTAzLnBuZw' },
+    { icon: BookOpen, title: 'Safety Program Development', description: 'Custom compliance solutions', image: 'https://imgs.search.brave.com/atHIEx56hT3L7u7MHwkHEojE3WTL6L2SLpscSZEdDK8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9iZXMt/Y29ycC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjUvMDYv/bjhuLW1hbnVmYWN0/dXJpbmctZmVtYWxl/LWNvbnN1bHRhbnQu/anBn' },
     { icon: ClipboardCheck, title: 'Field Safety Services', description: 'Industrial Hygiene Monitoring', image: 'https://images.unsplash.com/photo-1738162837329-2f2a2cdebb5e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwc2FmZXR5JTIwZXF1aXBtZW50fGVufDF8fHx8MTc3MTQzNTIyOXww&ixlib=rb-4.1.0&q=80&w=1080' },
     { icon: AlertTriangle, title: 'Hazard Evaluation', description: 'Risk Mitigation Strategies', image: 'https://images.unsplash.com/photo-1628870571159-82001646505b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b3JrcGxhY2UlMjBoYXphcmQlMjBhc3Nlc3NtZW50fGVufDF8fHx8MTc3MTQzNTIyOXww&ixlib=rb-4.1.0&q=80&w=1080' },
   ];
 
   return (
-    <section id="services" ref={ref} className="py-24 bg-slate-50">
+    <section ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

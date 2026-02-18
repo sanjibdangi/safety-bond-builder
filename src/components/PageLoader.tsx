@@ -21,33 +21,48 @@ export function PageLoader() {
           className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900"
         >
           <div className="text-center">
+
+            {/* ⭐ LOGO WITH GREEN CIRCLE LOADER */}
             <motion.div
-              initial={{ scale: 0.5, opacity: 0 }}
+              initial={{ scale: 0.6, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="mb-8"
+              className="relative mb-10 flex justify-center"
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto shadow-2xl">
-                <motion.span
-                  initial={{ rotate: 0 }}
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-                  className="text-white font-bold text-5xl"
-                >
-                  C
-                </motion.span>
+              {/* rotating ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                className="absolute w-32 h-32 rounded-full border-4 border-emerald-400 border-t-transparent"
+              />
+
+              {/* logo image */}
+              <div className="w-24 h-24 rounded-full bg-white flex items-center justify-center shadow-2xl">
+                <img
+                  src="/favicon.png"
+                  alt="logo"
+                  className="w-16 h-16 object-contain"
+                />
               </div>
             </motion.div>
 
+            {/* ⭐ BRAND TEXT */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              className="tracking-wide"
             >
-              <h2 className="text-3xl font-bold text-white mb-2">CORR SAFETY</h2>
-              <p className="text-emerald-300 font-semibold">PROFESSIONALS</p>
+              <h2 className="text-3xl font-extrabold">
+                <span className="text-white">CORR </span>
+                <span className="text-emerald-400">SAFETY</span>
+              </h2>
+              <p className="text-white font-semibold tracking-[0.4em] text-sm mt-1">
+                PROFESSIONALS
+              </p>
             </motion.div>
 
+            {/* Progress bar */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -61,6 +76,7 @@ export function PageLoader() {
                 className="h-full bg-gradient-to-r from-emerald-400 to-green-400"
               />
             </motion.div>
+
           </div>
         </motion.div>
       )}

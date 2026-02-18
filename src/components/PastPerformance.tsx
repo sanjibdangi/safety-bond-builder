@@ -1,25 +1,40 @@
 import { motion } from 'motion/react';
 import { useInView } from '../hooks/useInView';
-import { Building2, Sun, Wrench } from 'lucide-react';
-import { AnimatedCounter } from './AnimatedCounter';
 
 export function PastPerformance() {
   const [ref, isInView] = useInView();
-
-  const projects = [
-    { icon: Building2, title: 'Commercial Construction', value: 150, suffix: '+', description: 'Major projects completed', iconBg: 'bg-emerald-500/10', iconColor: 'text-emerald-500' },
-    { icon: Sun, title: 'Solar & Renewable Energy', value: 75, suffix: '+', description: 'Clean energy sites managed', iconBg: 'bg-amber-500/10', iconColor: 'text-amber-500' },
-    { icon: Wrench, title: 'Industrial & Infrastructure', value: 200, suffix: '+', description: 'Critical facilities secured', iconBg: 'bg-blue-500/10', iconColor: 'text-blue-500' },
-  ];
 
   const industries = [
     'High-Rise Construction', 'Data Centers', 'Solar Farms', 'Manufacturing Plants',
     'Hospitals & Healthcare', 'Educational Facilities', 'Transportation Infrastructure', 'Oil & Gas Operations',
   ];
 
+  const performanceCards = [
+    {
+      logo: "/gsa.png",
+      title: "General Services Administration (FAS)",
+      description:
+        "Provided safety and engineering support services under GSA MAS contract.",
+    },
+    {
+      logo: "/sunpower.png",
+      title: "SunPower Corporation",
+      description:
+        "Delivered on-site safety management for renewable energy projects, including training and daily oversight.",
+    },
+    {
+      logo: "/aim.png",
+      title: "AIM Mechanical Services, LLC",
+      description:
+        "Developed HSE manuals, delivered training, and provided long-term field safety audits and compliance support.",
+    },
+  ];
+
   return (
-    <section id="performance" className="py-20 bg-background">
+    <section ref={ref} className="py-16 md:py-20 bg-[#A3A2A3]/30">
       <div className="container mx-auto px-6">
+
+        {/* Heading */}
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -27,45 +42,68 @@ export function PastPerformance() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Past Performance
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+            Past <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">Performance</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Proven track record across diverse industries and project scales
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, index) => {
-            const Icon = project.icon;
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-slate-50 backdrop-blur-sm border border-slate-200 rounded-2xl p-8 text-center hover:border-emerald-500 hover:shadow-xl transition-all duration-300 group"
-              >
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${project.iconBg} mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className={`w-8 h-8 ${project.iconColor}`} />
-                </div>
-                <div className="mb-4">
-                  <div className="flex items-center justify-center gap-1">
-                    <AnimatedCounter
-                      end={project.value}
-                      duration={2000}
-                      className="text-5xl font-bold text-slate-900"
-                    />
-                    <span className="text-5xl font-bold text-emerald-600">{project.suffix}</span>
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">{project.title}</h3>
-                <p className="text-slate-600">{project.description}</p>
-              </motion.div>
-            );
-          })}
+        {/* ⭐ PERFORMANCE CARDS */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {performanceCards.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="
+                group
+                bg-white
+                border border-slate-200
+                rounded-2xl
+                p-8
+                text-center
+                shadow-md
+                transition-all duration-300
+                hover:shadow-2xl hover:-translate-y-1
+                active:scale-95
+              "
+            >
+              {/* Logo */}
+              <div className="flex justify-center mb-6">
+                <img
+                  src={item.logo}
+                  alt={item.title}
+                  className="
+                    w-28 h-28
+                    rounded-full
+                    object-cover
+                    transition-all duration-500
+
+                    md:grayscale
+                    md:group-hover:grayscale-0
+
+                    group-hover:scale-105
+                  "
+                />
+              </div>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-emerald-700 mb-3">
+                {item.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-slate-700 leading-relaxed">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
 
+        {/* Industry Expertise */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -89,6 +127,7 @@ export function PastPerformance() {
             ))}
           </div>
         </motion.div>
+
       </div>
     </section>
   );

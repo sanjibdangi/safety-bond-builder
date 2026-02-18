@@ -7,9 +7,13 @@ export function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Change navbar style immediately when scrolling starts
+      setIsScrolled(window.scrollY > 1);
     };
+
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // run once on load
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -41,21 +45,19 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
+
           {/* Logo */}
-          <div className="flex items-center cursor-pointer" onClick={() => scrollToSection('hero')}>
-            <div className="flex items-center space-x-3">
-              <div className={`w-12 h-12 bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-lg flex items-center justify-center transition-all duration-300 ${
-                isScrolled ? 'scale-90' : 'scale-100'
-              }`}>
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <div>
-                <div className={`font-bold text-lg leading-tight transition-colors duration-300 ${
-                  isScrolled ? 'text-slate-900' : 'text-white'
-                }`}>CORR SAFETY</div>
-                <div className="text-emerald-600 text-xs font-semibold">PROFESSIONALS</div>
-              </div>
-            </div>
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => scrollToSection('hero')}
+          >
+            <img
+              src="/logo.png"
+              alt="CORR SAFETY Logo"
+              className={`w-auto transition-all duration-300 ${
+                isScrolled ? 'h-10' : 'h-12'
+              }`}
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -91,7 +93,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 mt-4 border-t border-white/20 bg-white/95 backdrop-blur-md rounded-lg">
+          <div className="lg:hidden py-4 mt-4 border-t border-slate-200 bg-white rounded-lg shadow-lg">
             {navItems.map((item) => (
               <button
                 key={item.id}
